@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://cefhp5035xijj"]
 
 [ext_resource type="PackedScene" uid="uid://dnogk2fox8gc0" path="res://cenas/towers/base.tscn" id="1_2rcqm"]
+[ext_resource type="Script" uid="uid://nnj5ieay1hkt" path="res://scripts/battleground.gd" id="1_mdgkb"]
 [ext_resource type="PackedScene" uid="uid://cw85r0yffe4v7" path="res://cenas/enemies/sharkman.tscn" id="2_vhvkp"]
 
 [node name="Battleground" type="Node2D" unique_id=738714584]
+script = ExtResource("1_mdgkb")
+enemies = Array[PackedScene]([ExtResource("2_vhvkp")])
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=2058569243]
+wait_time = 2.0
+autostart = true
 
 [node name="Base" parent="." unique_id=1365337900 instance=ExtResource("1_2rcqm")]
 position = Vector2(320, 180)

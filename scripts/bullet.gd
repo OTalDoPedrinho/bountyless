@@ -26,8 +26,6 @@ func _physics_process(_delta: float) -> void:
 		var collider = collision.get_collider()
 		
 		if collider != null:
-			print("Colidiu com: ", collider.name)
-			
 			if collider.is_in_group("enemies"):
 				if not hit:
 					hit = true
