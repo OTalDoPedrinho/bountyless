@@ -16,4 +16,34 @@ autostart = true
 position = Vector2(320, 180)
 hp = 150
 
-[node name="Enemy" parent="." unique_id=2006841337 instance=ExtResource("2_vhvkp")]
+[node name="RunButton" type="Button" parent="." unique_id=1266204502]
+offset_left = 247.0
+offset_top = 275.0
+offset_right = 403.0
+offset_bottom = 342.0
+text = "RUN"
+
+[node name="MenuButton" type="MenuButton" parent="." unique_id=74946483]
+offset_left = 512.0
+offset_top = 3.0
+offset_right = 637.0
+offset_bottom = 11.0
+text = "TOWERS"
+item_count = 1
+popup/item_0/text = "pinto"
+popup/item_0/id = 0
+
+[node name="GoldLabel" type="Label" parent="." unique_id=2002438521]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 26.0
+text = "Gold:"
+
+[node name="WaveLabel" type="Label" parent="." unique_id=1654023624]
+offset_left = 283.0
+offset_top = 4.0
+offset_right = 361.0
+offset_bottom = 27.0
+text = "Wave #1"
+horizontal_alignment = 1

@@ -6,7 +6,7 @@
 
 [node name="Enemy" type="CharacterBody2D" unique_id=2006841337 groups=["enemies"]]
 script = ExtResource("1_n5yj1")
-hp = 75
+hp = 20
 drop = 15
 speed = 50
 rng = 10

@@ -1,4 +1,4 @@
 extends Node
 
 @export var gold: int
-@export var playing: bool = false
+@export var running: bool = false

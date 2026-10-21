@@ -10,6 +10,7 @@ extends CharacterBody2D
 @export var cooldown: float
 @export var is_shooter: bool
 @export var b_scene: PackedScene
+@export var g_scene: PackedScene = preload("res://cenas/gold_coin.tscn")
 #endregion
 
 var direction: Vector2 = Vector2.ZERO
@@ -78,5 +79,8 @@ func take_dmg(dano):
 	hp-=dano
 	
 	if hp<=0:
+		for i in range(drop/5):
+			var gold = g_scene.instantiate()
+			get_parent().add_child(gold)
+			gold.global_position = global_position + Vector2(randf_range(-16, 16), randf_range(-16, 16))
 		queue_free()
-		
