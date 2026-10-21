@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cw85r0yffe4v7"]
+
+[ext_resource type="Script" uid="uid://dyjt6i2nln1xv" path="res://scripts/enemy_class.gd" id="1_n5yj1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=2006841337 groups=["enemies"]]
+script = ExtResource("1_n5yj1")
+hp = 75
+drop = 15
+speed = 50
+rng = 10
+damage = 50
+cooldown = 1.5
+metadata/_custom_type_script = "uid://dyjt6i2nln1xv"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=976729098]
+shape = SubResource("CircleShape2D_yf5fn")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=142279305]

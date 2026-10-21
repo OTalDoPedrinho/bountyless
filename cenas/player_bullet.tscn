@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bix2qhudm7iyt"]
+
+[ext_resource type="Script" uid="uid://cf2r74hyuse8h" path="res://scripts/bullet.gd" id="1_ffpgs"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 4.0
+height = 24.0
+
+[node name="PlayerBullet" type="CharacterBody2D" unique_id=1838591446]
+script = ExtResource("1_ffpgs")
+speed = 50
+metadata/_custom_type_script = "uid://cf2r74hyuse8h"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1773600515]
+rotation = 1.5707964
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CapsuleShape2D_g4v7s")

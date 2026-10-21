@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://d2wsav6al4cnp"]
+
+[ext_resource type="Script" uid="uid://bi04l75nasgkq" path="res://scripts/tower_class.gd" id="1_3onth"]
+[ext_resource type="PackedScene" uid="uid://bix2qhudm7iyt" path="res://cenas/player_bullet.tscn" id="2_kqdxm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+
+[node name="Cannon" type="Area2D" unique_id=1102646738]
+script = ExtResource("1_3onth")
+hp = 50
+cost = 20
+rng = 12
+damage = 30
+cooldown = 1.25
+is_shooter = true
+b_scene = ExtResource("2_kqdxm")
+metadata/_custom_type_script = "uid://bi04l75nasgkq"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=729859262]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1920706826]
+one_shot = true
+autostart = true
